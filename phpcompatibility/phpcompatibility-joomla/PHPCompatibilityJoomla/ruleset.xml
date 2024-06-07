@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="PHPCompatibilityJoomla">
+    <description>Joomla specific ruleset which checks for PHP cross version compatibility.</description>
+
+    <!--
+    The Joomla minimum PHP requirement is PHP 5.3.10.
+    Add the following in your project PHP_CodeSniffer ruleset to enforce this:
+    <config name="testVersion" value="5.3-"/>
+
+    This directive is not included in this ruleset as individual projects may use
+    a different (higher) minimum PHP version.
+    -->
+
+    <rule ref="PHPCompatibility">
+        <!-- https://github.com/joomla-framework/compat/tree/master/src -->
+        <exclude name="PHPCompatibility.Classes.NewClasses.callbackfilteriteratorFound"/>
+        <exclude name="PHPCompatibility.Interfaces.NewInterfaces.jsonserializableFound"/>
+    </rule>
+
+    <!-- https://github.com/joomla/joomla-cms/blob/staging/composer.json -->
+
+    <!-- Includes Paragonie random_compat. -->
+    <rule ref="PHPCompatibilityParagonieSodiumCompat"/>
+
+    <!-- Includes ircmaxell password_compat. -->
+    <rule ref="PHPCompatibilitySymfonyPolyfillPHP55"/>
+    <rule ref="PHPCompatibilitySymfonyPolyfillPHP56"/>
+    <rule ref="PHPCompatibilitySymfonyPolyfillPHP71"/>
+    <rule ref="PHPCompatibilitySymfonyPolyfillPHP73"/>
+
+</ruleset>
