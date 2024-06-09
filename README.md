@@ -1,5 +1,5 @@
 #Personal PHP setup
-`git clone git@github.com:lbonomo/PHP_WS_Setup.git`
+`git clone git@github.com:lbonomo/PHP_WS_Setup.git PHP`
 
 ## PHP Code Sniffer
 ```
