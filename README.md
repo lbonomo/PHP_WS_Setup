@@ -3,6 +3,19 @@
 
 ## PHP Code Sniffer
 
+### Instalación manual
+```
+# Or download using wget
+wget https://phars.phpcodesniffer.com/phpcs.phar -O phpcs 
+wget https://phars.phpcodesniffer.com/phpcbf.phar -O phpcbf
+
+chmod +x phpcs
+chmod +x phpcbf
+
+sudo cp phpcs /usr/bin/phpcs 
+sudo cp phpcbf /usr/bin/phpcbf
+```
+
 ### Rules
 ```
 cd ~/proyectos/PHP
@@ -10,17 +23,12 @@ cd ~/proyectos/PHP
 git clone git@github.com:WordPress/WordPress-Coding-Standards.git
 git clone git@github.com:PHPCSStandards/PHPCSExtra.git
 git clone git@github.com:PHPCSStandards/PHPCSUtils.git
-
-cd WordPress-Coding-Standards
-ln -s ../PHPCSUtils/PHPCSUtils PHPCSUtils
-ln -s ../PHPCSExtra/Universal Universal
-ln -s ../PHPCSExtra/NormalizedArrays NormalizedArrays
 ```
 
 ### Config
 Set config
 ```
-$ sudo phpcs --config-set installed_paths "/home/lbonomo/proyectos/PHP/WordPress-Coding-Standards/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-all/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-wp,/home/lbonomo/proyectos/PHP/phpcompatibility/php-compatibility,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-paragonie"
+$ sudo phpcs --config-set installed_paths "/home/lbonomo/proyectos/PHP/WordPress-Coding-Standards/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-all/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-wp,/home/lbonomo/proyectos/PHP/phpcompatibility/php-compatibility,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-paragonie,/home/lbonomo/proyectos/PHP/PHPCSExtra,/home/lbonomo/proyectos/PHP/PHPCSUtils/PHPCSUtils, /home/lbonomo/proyectos/PHP/PHPCSExtra/Universal, /home/lbonomo/proyectos/PHP/PHPCSExtra/NormalizedArrays"
 $ sudo phpcs --config-set default_standard WordPress
 ```
 
