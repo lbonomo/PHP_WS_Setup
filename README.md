@@ -21,14 +21,17 @@ ln -s ../PHPCSExtra/NormalizedArrays NormalizedArrays
 Set config
 ```
 $ sudo phpcs --config-set installed_paths "/home/lbonomo/proyectos/PHP/WordPress-Coding-Standards/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-all/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-wp,/home/lbonomo/proyectos/PHP/phpcompatibility/php-compatibility,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-paragonie"
+$ sudo phpcs --config-set default_standard WordPress
 ```
+
+
 
 Check config
 ```
 $ phpcs --config-show
 Using config file: /etc/php-codesniffer/CodeSniffer.conf
 
-default_standard: PEAR
+default_standard: WordPress
 installed_paths:  /home/lbonomo/proyectos/PHP/WordPress-Coding-Standards/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-all/,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-wp,/home/lbonomo/proyectos/PHP/phpcompatibility/php-compatibility,/home/lbonomo/proyectos/PHP/phpcompatibility/phpcompatibility-paragonie
 php_path:         /usr/bin/php
 
