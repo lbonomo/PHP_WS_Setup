@@ -9,11 +9,11 @@
 wget https://phars.phpcodesniffer.com/phpcs.phar -O phpcs 
 wget https://phars.phpcodesniffer.com/phpcbf.phar -O phpcbf
 
-chmod +x phpcs
-chmod +x phpcbf
+chmod +x bin/phpcs
+chmod +x bin/phpcbf
 
-sudo cp phpcs /usr/bin/phpcs 
-sudo cp phpcbf /usr/bin/phpcbf
+sudo cp bin/phpcs /usr/bin/phpcs 
+sudo cp bin/phpcbf /usr/bin/phpcbf
 ```
 
 ### Rules
@@ -49,3 +49,10 @@ The installed coding standards are MySource, PEAR, PSR1, PSR2, PSR12, Squiz, Zen
 
 ## Stubs
 
+## PHP Unit
+```bash
+sudo apt install php8.2-mbstring php8.2-xml php8.2-pcov php8.2-xdebug
+wget -O phpunit.phar https://phar.phpunit.de/phpunit-10.phar
+chmod +x phpunit.phar
+sudo cp bin/phpunit.phar /usr/bin/phpunit
+```
