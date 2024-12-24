@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<ruleset name="coding-style">
+	<description>Coding style description</description>
+	<arg value="ps"/>
+	<!-- Check up to 8 files simultaneously. -->
+	<arg name="parallel" value="8"/>
+	<!-- Check PHP files only. JavaScript and CSS files are checked separately using the @wordpress/scripts package. -->
+	<arg name="extensions" value="php"/>
+	<config name="testVersion" value="7.4"/>
+
+	<!-- 2. Files -->
+	<file>./wp-content/themes/buddyboss-theme-child/</file>
+	<file>./wp-content/plugins/custom-events/</file>
+
+	<!-- Generic (43 sniffs) -->
+	<rule ref="Generic.Classes.DuplicateClassName"/>
+	<!-- <rule ref="Generic.Classes.OpeningBraceSameLine"/> -->
+	<!-- <rule ref="Generic.CodeAnalysis.AssignmentInCondition"/> -->
+	<rule ref="Generic.CodeAnalysis.EmptyPHPStatement"/>
+	<rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+	<rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+	<rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+	<!-- <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/> -->
+	<!-- <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/> -->
+	<!-- <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/> -->
+	<!-- <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/> -->
+	<!-- <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/> -->
+	<!-- <rule ref="Generic.Commenting.DocComment"/> -->
+	<!-- <rule ref="Generic.ControlStructures.InlineControlStructure"/> -->
+	<!-- <rule ref="Generic.Files.ByteOrderMark"/> -->
+	<rule ref="Generic.Files.EndFileNewline"/>
+	<!-- <rule ref="Generic.Files.LineEndings"/> -->
+	<!-- <rule ref="Generic.Files.OneObjectStructurePerFile"/> -->
+	<!-- <rule ref="Generic.Formatting.DisallowMultipleStatements"/> -->
+	<!-- <rule ref="Generic.Formatting.MultipleStatementAlignment"/> -->
+	<!-- <rule ref="Generic.Formatting.SpaceAfterCast"/> -->
+	<rule ref="Generic.Functions.CallTimePassByReference"/>
+	<!-- <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/> -->
+	<!-- <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/> -->
+	<!-- <rule ref="Generic.NamingConventions.UpperCaseConstantName"/> -->
+	<rule ref="Generic.PHP.BacktickOperator"/>
+	<rule ref="Generic.PHP.DeprecatedFunctions"/>
+	<rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+	<rule ref="Generic.PHP.DiscourageGoto"/>
+	<rule ref="Generic.PHP.ForbiddenFunctions"/>
+	<!-- <rule ref="Generic.PHP.LowerCaseConstant"/> -->
+	<!-- <rule ref="Generic.PHP.LowerCaseKeyword"/> -->
+	<!-- <rule ref="Generic.PHP.LowerCaseType"/> -->
+	<rule ref="Generic.PHP.Syntax"/>
+	<!-- <rule ref="Generic.Strings.UnnecessaryStringConcat"/> -->
+	<!-- <rule ref="Generic.VersionControl.GitMergeConflict"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.ScopeIndent"/> -->
+	<!-- <rule ref="Generic.WhiteSpace.SpreadOperatorSpacingAfter"/> -->
+
+	<!-- PEAR (3 sniffs) -->
+	<!-- <rule ref="PEAR.Files.IncludingFile"/> -->
+	<!-- <rule ref="PEAR.Functions.FunctionCallSignature"/> -->
+	<!-- <rule ref="PEAR.NamingConventions.ValidClassName"/> -->
+
+	<!-- PSR2 (7 sniffs) -->
+	<rule ref="PSR2.Classes.PropertyDeclaration"/>
+	<rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+	<rule ref="PSR2.ControlStructures.SwitchDeclaration"/>
+	<rule ref="PSR2.Files.ClosingTag"/>
+	<rule ref="PSR2.Methods.FunctionClosingBrace"/>
+	<!-- <rule ref="PSR2.Methods.MethodDeclaration "/> -->
+	<!-- <rule ref="PSR2.Namespaces.NamespaceDeclaration "/> -->
+
+	<!-- PSR12 (4 sniffs) -->
+	<!-- <rule ref="PSR12.Classes.ClassInstantiation"/> -->
+	<!-- <rule ref="PSR12.Functions.NullableTypeDeclaration"/> -->
+	<!-- <rule ref="PSR12.Functions.ReturnTypeDeclaration"/> -->
+	<rule ref="PSR12.Keywords.ShortFormTypeKeywords"/>
+
+	<!-- Squiz (29 sniffs) -->
+	<rule ref="Squiz.Classes.SelfMemberReference"/>
+	<!-- <rule ref="Squiz.Commenting.BlockComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.ClassComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.ClosingDeclarationComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.DocCommentAlignment"/> -->
+	<!-- <rule ref="Squiz.Commenting.EmptyCatchComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.FileComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.FunctionComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/> -->
+	<!-- <rule ref="Squiz.Commenting.InlineComment"/> -->
+	<!-- <rule ref="Squiz.Commenting.VariableComment"/> -->
+	<!-- <rule ref="Squiz.ControlStructures.ControlSignature"/> -->
+	<!-- <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing"/> -->
+	<!-- <rule ref="Squiz.Functions.FunctionDuplicateArgument"/> -->
+	<!-- <rule ref="Squiz.Operators.IncrementDecrementUsage"/> -->
+	<rule ref="Squiz.Operators.ValidLogicalOperators"/>
+	<!-- <rule ref="Squiz.PHP.CommentedOutCode"/> -->
+	<!-- <rule ref="Squiz.PHP.DisallowMultipleAssignments"/> -->
+	<!-- <rule ref="Squiz.PHP.DisallowSizeFunctionsInLoops"/> -->
+	<!-- <rule ref="Squiz.PHP.EmbeddedPhp"/> -->
+	<!-- <rule ref="Squiz.PHP.Eval"/> -->
+	<!-- <rule ref="Squiz.PHP.NonExecutableCode"/> -->
+	<!-- <rule ref="Squiz.Scope.MethodScope"/> -->
+	<!-- <rule ref="Squiz.Strings.ConcatenationSpacing"/> -->
+	<!-- <rule ref="Squiz.Strings.DoubleQuoteUsage"/> -->
+	<!-- <rule ref="Squiz.WhiteSpace.CastSpacing"/> -->
+	<!-- <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/> -->
+	<!-- <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/> -->
+	<!-- <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/> -->
+
+	<!-- Universal (21 sniffs) -->
+	<!-- <rule ref="Universal.Arrays.DisallowShortArraySyntax"/> -->
+	<rule ref="Universal.Arrays.DuplicateArrayKey"/>
+	<!-- <rule ref="Universal.Classes.ModifierKeywordOrder"/> -->
+	<!-- <rule ref="Universal.Classes.RequireAnonClassParentheses"/> -->
+	<!-- <rule ref="Universal.CodeAnalysis.ConstructorDestructorReturn"/> -->
+	<rule ref="Universal.CodeAnalysis.ForeachUniqueAssignment"/>
+	<!-- <rule ref="Universal.CodeAnalysis.StaticInFinalClass"/> -->
+	<!-- <rule ref="Universal.Constants.LowercaseClassResolutionKeyword"/> -->
+	<!-- <rule ref="Universal.Constants.ModifierKeywordOrder"/> -->
+	<!-- <rule ref="Universal.Constants.UppercaseMagicConstants"/> -->
+	<!-- <rule ref="Universal.ControlStructures.DisallowLonelyIf"/> -->
+	<!-- <rule ref="Universal.Files.SeparateFunctionsFromOO"/> -->
+	<!-- <rule ref="Universal.NamingConventions.NoReservedKeywordParameterNames"/> -->
+	<!-- <rule ref="Universal.Operators.DisallowShortTernary"/> -->
+	<!-- <rule ref="Universal.Operators.DisallowStandalonePostIncrementDecrement"/> -->
+	<rule ref="Universal.Operators.StrictComparisons"/>
+	<!-- <rule ref="Universal.Operators.TypeSeparatorSpacing"/> -->
+	<!-- <rule ref="Universal.UseStatements.LowercaseFunctionConst"/> -->
+	<!-- <rule ref="Universal.WhiteSpace.AnonClassKeywordSpacing"/> -->
+	<!-- <rule ref="Universal.WhiteSpace.DisallowInlineTabs"/> -->
+	<!-- <rule ref="Universal.WhiteSpace.PrecisionAlignment"/> -->
+
+
+	<!-- WordPress (58 sniffs) -->
+	<!-- <rule ref="WordPress.Arrays.ArrayDeclarationSpacing"/> -->
+	<!-- <rule ref="WordPress.Arrays.ArrayIndentation"/> -->
+	<!-- <rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/> -->
+	<!-- <rule ref="WordPress.Arrays.CommaAfterArrayItem"/> -->
+	<!-- <rule ref="WordPress.Arrays.MultipleStatementAlignment"/> -->
+	<!-- <rule ref="WordPress.CodeAnalysis.AssignmentInTernaryCondition"/> -->
+	<!-- <rule ref="WordPress.CodeAnalysis.EscapedNotTranslated"/> -->
+	<!-- <rule ref="WordPress.DateTime.CurrentTimeTimestamp"/> -->
+	<!-- <rule ref="WordPress.DateTime.RestrictedFunctions"/> -->
+	<rule ref="WordPress.DB.DirectDatabaseQuery"/>
+	<rule ref="WordPress.DB.PreparedSQL"/>
+	<rule ref="WordPress.DB.PreparedSQLPlaceholders"/>
+	<rule ref="WordPress.DB.RestrictedClasses"/>
+	<rule ref="WordPress.DB.RestrictedFunctions"/>
+	<rule ref="WordPress.DB.SlowDBQuery"/>
+	<!-- <rule ref="WordPress.Files.FileName"/> -->
+	<!-- <rule ref="WordPress.NamingConventions.PrefixAllGlobals"/> -->
+	<!-- <rule ref="WordPress.NamingConventions.ValidFunctionName"/> -->
+	<!-- <rule ref="WordPress.NamingConventions.ValidHookName"/> -->
+	<!-- <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/> -->
+	<!-- <rule ref="WordPress.NamingConventions.ValidVariableName"/> -->
+	<rule ref="WordPress.PHP.DevelopmentFunctions"/>
+	<!-- <rule ref="WordPress.PHP.DiscouragedPHPFunctions"/> -->
+	<!-- <rule ref="WordPress.PHP.DontExtract"/> -->
+	<!-- <rule ref="WordPress.PHP.IniSet"/> -->
+	<!-- <rule ref="WordPress.PHP.NoSilencedErrors"/> -->
+	<!-- <rule ref="WordPress.PHP.POSIXFunctions"/> -->
+	<!-- <rule ref="WordPress.PHP.PregQuoteDelimiter"/> -->
+	<!-- <rule ref="WordPress.PHP.RestrictedPHPFunctions"/> -->
+	<!-- <rule ref="WordPress.PHP.StrictInArray"/> -->
+	<!-- <rule ref="WordPress.PHP.TypeCasts"/> -->
+	<rule ref="WordPress.PHP.YodaConditions"/>
+	<rule ref="WordPress.Security.EscapeOutput"/>
+	<rule ref="WordPress.Security.NonceVerification"/>
+	<rule ref="WordPress.Security.PluginMenuSlug"/>
+	<rule ref="WordPress.Security.SafeRedirect"/>
+	<rule ref="WordPress.Security.ValidatedSanitizedInput"/>
+	<!-- <rule ref="WordPress.Utils.I18nTextDomainFixer"/> -->
+	<!-- <rule ref="WordPress.WhiteSpace.CastStructureSpacing"/> -->
+	<!-- <rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/> -->
+	<!-- <rule ref="WordPress.WhiteSpace.ObjectOperatorSpacing"/> -->
+	<!-- <rule ref="WordPress.WhiteSpace.OperatorSpacing"/> -->
+	<!-- <rule ref="WordPress.WP.AlternativeFunctions"/> -->
+	<!-- <rule ref="WordPress.WP.Capabilities"/> -->
+	<!-- <rule ref="WordPress.WP.CapitalPDangit"/> -->
+	<!-- <rule ref="WordPress.WP.ClassNameCase"/> -->
+	<rule ref="WordPress.WP.CronInterval"/>
+	<rule ref="WordPress.WP.DeprecatedClasses"/>
+	<rule ref="WordPress.WP.DeprecatedFunctions"/>
+	<rule ref="WordPress.WP.DeprecatedParameters"/>
+	<rule ref="WordPress.WP.DeprecatedParameterValues"/>
+	<rule ref="WordPress.WP.DiscouragedConstants"/>
+	<rule ref="WordPress.WP.DiscouragedFunctions"/>
+	<rule ref="WordPress.WP.EnqueuedResourceParameters"/>
+	<rule ref="WordPress.WP.EnqueuedResources"/>
+	<!-- <rule ref="WordPress.WP.GlobalVariablesOverride"/> -->
+	<!-- <rule ref="WordPress.WP.I18n"/> -->
+	<rule ref="WordPress.WP.PostsPerPage"/>
+
+
+	<!-- PHPCS_SecurityAudit (20 sniffs) -->
+	<rule ref="Security"/>
+	<!-- <rule ref="Security.BadFunctions.Asserts"/> -->
+	<!-- <rule ref="PHPCS_securityAudit.BadFunctions.Backticks"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.CallbackFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.CryptoFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.EasyRFI"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.EasyXSS"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.ErrorHandling"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.FilesystemFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.FringeFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.FunctionHandlingFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.Mysqli"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.NoEvals"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.Phpinfos"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.PregReplace"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.SQLFunctions"/>
+	<rule ref="PHPCS_securityAudit.BadFunctions.SystemExecFunctions"/>
+	<rule ref="PHPCS_securityAudit.Drupal8.CVE20132110"/>
+	<rule ref="PHPCS_securityAudit.Drupal8.CVE20134113"/>
+	<rule ref="PHPCS_securityAudit.Misc.BadCorsHeader"/>
+	<rule ref="PHPCS_securityAudit.Misc.IncludeMismatch"/> -->
+
+
+</ruleset>
